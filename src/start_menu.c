@@ -65,6 +65,7 @@ enum
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
+    MENU_ACTION_GIVEMON,
 };
 
 // Save status
@@ -106,6 +107,7 @@ static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
+static bool8 StartMenuGivemonCallback(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -183,6 +185,7 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
 };
 
 static const u8 sText_MenuDebug[] = _("DEBUG");
+static const u8 sText_MenuGivemon[] = _("DEBUG");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -200,6 +203,7 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire,  {.u8_void = StartMenuBattlePyramidRetireCallback}},
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
+    [MENU_ACTION_GIVEMON]         = {sText_MenuGivemon, {.u8_void = StartMenuGivemonCallback}},
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
@@ -344,6 +348,7 @@ static void BuildNormalStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_GIVEMON);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -644,6 +649,7 @@ static bool8 HandleStartMenuInput(void)
         if (gMenuCallback != StartMenuSaveCallback
             && gMenuCallback != StartMenuExitCallback
             && gMenuCallback != StartMenuDebugCallback
+            && gMenuCallback != StartMenuGivemonCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
             && gMenuCallback != StartMenuBattlePyramidRetireCallback)
         {
@@ -790,6 +796,12 @@ static bool8 StartMenuDebugCallback(void)
 #endif
 
 return TRUE;
+}
+
+static bool8 StartMenuGivemonCallback(void)
+{
+    StartMenuDebugCallback();
+    return TRUE;
 }
 
 static bool8 StartMenuSafariZoneRetireCallback(void)

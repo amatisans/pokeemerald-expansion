@@ -1,0 +1,49 @@
+mapscripts PokeSpawn_MapScripts {}
+
+
+script PokeSpawn_EventScript_Items{
+    lockall
+    giveitem(ITEM_RARE_CANDY, 999)
+
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("Recieved Rare Candies")
+    
+    removeobject(1)
+    setflag(FLAG_RARE_CANDY)
+
+    releaseall
+    end
+}
+
+script PokeSpawn_EventScript_PC{
+ 
+    end
+ 
+}
+ 
+script NicknamePartyMon{
+ 
+    // msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    // if(var(VAR_RESULT) == YES){
+    //     call(Common_EventScript_GetGiftMonPartySlot)
+    //     call(Common_EventScript_NameReceivedPartyMon)
+    // }
+ 
+ 
+}
+ 
+script NicknameBoxMon{
+ 
+    // msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    // if(var(VAR_RESULT) == YES){
+    //     call(Common_EventScript_NameReceivedBoxMon)
+    // }
+    //call(Common_EventScript_TransferredToPC)
+ 
+}
+ 
+text PokeSpawn_NotChosen{
+    "You did not choose the Pokemon"
+}
