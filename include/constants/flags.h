@@ -44,7 +44,7 @@
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
 #define FLAG_RARE_CANDY      0x20 // Opening Give Candy
-#define FLAG_ALLAN_MONS      0x21 // give allan mons
+#define FLAG_GOT_MONS      0x21 // give allan mons
 #define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag

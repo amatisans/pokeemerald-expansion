@@ -4,15 +4,16 @@ mapscripts PokeSpawn_MapScripts {}
 script PokeSpawn_EventScript_Items{
     lockall
     giveitem(ITEM_RARE_CANDY, 999)
-
+    giveitem(ITEM_EXP_CANDY_XL, 999)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("Recieved Rare Candies")
 
 	setflag(FLAG_SYS_POKEDEX_GET)
     setflag(FLAG_ADVENTURE_STARTED)
 	special(SetUnlockedPokedexFlags)
 	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
 	setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag(FLAG_SYS_POKENAV_GET)
+    setflag(FLAG_RECEIVED_POKENAV)
 
     setflag(FLAG_SYS_NATIONAL_DEX)
 	special(EnableNationalPokedex)
@@ -24,10 +25,45 @@ script PokeSpawn_EventScript_Items{
     setflag(FLAG_RARE_CANDY)
 
     call(Walley1)
+    call(Woods1)
+    call(RustBoro)
+    setflag(FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA)
+    setflag(FLAG_DELIVERED_DEVON_GOODS)
+    setflag(FLAG_HIDE_ROUTE_110_TEAM_AQUA)
+    setflag(FLAG_HIDE_ROUTE_110_BIRCH)
+
+    
+// Boat guy
+    setvar(VAR_BRINEY_LOCATION, 1)
+	setflag(FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN)
+	setflag(FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN)
+	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY)
+	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT)
+	clearflag(FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT)
+	clearflag(FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY)
+	clearflag(FLAG_HIDE_BRINEYS_HOUSE_PEEKO)
+
+    clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND)
+    clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDA)
+    setflag(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE)
+    setflag(FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER)
+    setflag(FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN)
+    setvar(VAR_STEVENS_HOUSE_STATE, 1)
+    setflag(FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE)
+
+    
+    
 
     releaseall
     end
 }
+
+script RustBoro{
+    setflag(FLAG_RETURNED_DEVON_GOODS)
+	setflag(FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1)
+    setvar(VAR_RUSTBORO_CITY_STATE, 7)
+}
+
 
 script Walley1{
     setflag(FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM)
@@ -39,56 +75,107 @@ script Walley1{
 	special(InitBirchState)
 }
 
-script PokeSpawn_EventScript_PC{
-    
+script Woods1{
+    setvar(VAR_PETALBURG_WOODS_STATE, 1)
+}
+
+script PokeSpawn_EventScript_Dev{
+    lockall
+    msgbox("Dev Mons?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GRENINJA,1)
+        givemon(SPECIES_ZEKROM, 1)
+        givemon(SPECIES_BUZZWOLE, 1)
+        givemon(SPECIES_GARCHOMP, 1)
+        givemon(SPECIES_MARSHADOW, 1)
+        givemon(SPECIES_GROUDON, 1)
+
+        call(removeBalls)
+        
+        setvar(VAR_STARTER_MON, 0)
+    }
+    releaseall
     end
- 
-}
- 
-script NicknamePartyMon{
- 
-    // msgbox("Give it a nickname?", MSGBOX_YESNO)
-    hidemonpic
-    // if(var(VAR_RESULT) == YES){
-    //     call(Common_EventScript_GetGiftMonPartySlot)
-    //     call(Common_EventScript_NameReceivedPartyMon)
-    // }
- 
- 
-}
- 
-script NicknameBoxMon{
- 
-    // msgbox("Give it a nickname?", MSGBOX_YESNO)
-    hidemonpic
-    // if(var(VAR_RESULT) == YES){
-    //     call(Common_EventScript_NameReceivedBoxMon)
-    // }
-    //call(Common_EventScript_TransferredToPC)
- 
-}
- 
-text PokeSpawn_NotChosen{
-    "You did not choose the Pokemon"
 }
 
 script PokeSpawn_EventScript_Allan{
     lockall
-    msgbox("Allans Mons?", MSGBOX_YESNO)
+    msgbox("Allan's Mons?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_TOXTRICITY, 1)
-        givemon(SPECIES_COALOSSAL, 1)
-        givemon(SPECIES_ANNIHILAPE, 1)
-        givemon(SPECIES_GARCHOMP, 1)
-        givemon(SPECIES_LOPUNNY, 1)
-        givemon(SPECIES_FLYGON, 1)
-
-        removeobject(2)
-        setflag(FLAG_ALLAN_MONS)
-        setflag(FLAG_SYS_POKEMON_GET)
+        givemon(SPECIES_GRENINJA,1)
+        
+        call(removeBalls)
+        
+        setvar(VAR_STARTER_MON, 0)
     }
-
-
     releaseall
     end
+}
+
+script PokeSpawn_EventScript_Mercy{
+    lockall
+    msgbox("Mercy's Mons?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GRENINJA,1)
+        
+        call(removeBalls)
+        
+        setvar(VAR_STARTER_MON, 0)
+    }
+    releaseall
+    end
+}
+
+script PokeSpawn_EventScript_Greg{
+    lockall
+    msgbox("Greg's Mons?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GRENINJA,1)
+
+        call(removeBalls)
+        
+        setvar(VAR_STARTER_MON, 0)
+    }
+    releaseall
+    end
+}
+
+script PokeSpawn_EventScript_Dane{
+    lockall
+    msgbox("Dane's Mons?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GRENINJA,1)
+
+        call(removeBalls)
+        
+        setvar(VAR_STARTER_MON, 0)
+    }
+    releaseall
+    end
+}
+
+
+script PokeSpawn_EventScript_Savannah{
+    lockall
+    msgbox("Savannah's Mons?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GRENINJA,1)
+
+        call(removeBalls)
+        
+        setvar(VAR_STARTER_MON, 0)
+    }
+    releaseall
+    end
+}
+
+script removeBalls{
+    removeobject(2)
+    removeobject(3)
+    removeobject(4)
+    removeobject(5)
+    removeobject(6)
+    removeobject(7)
+    setflag(FLAG_GOT_MONS)
+    setflag(FLAG_SYS_POKEMON_GET)
 }
