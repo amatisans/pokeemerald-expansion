@@ -8,7 +8,7 @@ script PokeSpawn_EventScript_Items{
     playfanfare(MUS_OBTAIN_ITEM)
 
 	setflag(FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_ADVENTURE_STARTED)
+    //setflag(FLAG_ADVENTURE_STARTED)
 	special(SetUnlockedPokedexFlags)
 	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
 	setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
@@ -89,6 +89,8 @@ script PokeSpawn_EventScript_Dev{
         givemon(SPECIES_GARCHOMP, 1)
         givemon(SPECIES_MARSHADOW, 1)
         givemon(SPECIES_GROUDON, 1)
+
+        giveitem(ITEM_MAX_REPEL, 999)
 
         call(removeBalls)
         

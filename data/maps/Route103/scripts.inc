@@ -102,6 +102,7 @@ Route103_EventScript_AfterBrendanBattle::
 
 Route103_EventScript_RivalExit::
 	closemessage
+	setflag FLAG_ADVENTURE_STARTED
 	switch VAR_FACING
 	case DIR_SOUTH, Route103_EventScript_RivalExitFacingSouth
 	case DIR_NORTH, Route103_EventScript_RivalExitFacingNorth
