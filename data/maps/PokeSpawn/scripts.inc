@@ -49,265 +49,273 @@ PokeSpawn_EventScript_Items::
 	setflag FLAG_HIDE_ROUTE_110_TEAM_AQUA
 # 33 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_HIDE_ROUTE_110_BIRCH
+# 35 "data//maps/PokeSpawn/scripts.pory"
+	call BoatGuy
 # 37 "data//maps/PokeSpawn/scripts.pory"
-	setvar VAR_BRINEY_LOCATION, 1
-# 38 "data//maps/PokeSpawn/scripts.pory"
-	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
-# 39 "data//maps/PokeSpawn/scripts.pory"
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-# 40 "data//maps/PokeSpawn/scripts.pory"
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-# 41 "data//maps/PokeSpawn/scripts.pory"
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
-# 42 "data//maps/PokeSpawn/scripts.pory"
-	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-# 43 "data//maps/PokeSpawn/scripts.pory"
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
-# 44 "data//maps/PokeSpawn/scripts.pory"
-	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-# 46 "data//maps/PokeSpawn/scripts.pory"
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND
-# 47 "data//maps/PokeSpawn/scripts.pory"
+# 38 "data//maps/PokeSpawn/scripts.pory"
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDA
-# 48 "data//maps/PokeSpawn/scripts.pory"
+# 39 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE
-# 49 "data//maps/PokeSpawn/scripts.pory"
+# 40 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER
-# 50 "data//maps/PokeSpawn/scripts.pory"
+# 41 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
-# 51 "data//maps/PokeSpawn/scripts.pory"
+# 42 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_STEVENS_HOUSE_STATE, 1
-# 52 "data//maps/PokeSpawn/scripts.pory"
+# 43 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE
-# 57 "data//maps/PokeSpawn/scripts.pory"
+# 45 "data//maps/PokeSpawn/scripts.pory"
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 0
+# 46 "data//maps/PokeSpawn/scripts.pory"
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
+# 49 "data//maps/PokeSpawn/scripts.pory"
 	releaseall
 	end
 
 
+BoatGuy::
+# 54 "data//maps/PokeSpawn/scripts.pory"
+	setvar VAR_BRINEY_LOCATION, 1
+# 55 "data//maps/PokeSpawn/scripts.pory"
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+# 56 "data//maps/PokeSpawn/scripts.pory"
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+# 57 "data//maps/PokeSpawn/scripts.pory"
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+# 58 "data//maps/PokeSpawn/scripts.pory"
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+# 59 "data//maps/PokeSpawn/scripts.pory"
+	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+# 60 "data//maps/PokeSpawn/scripts.pory"
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+# 61 "data//maps/PokeSpawn/scripts.pory"
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	return
+
+
 RustBoro::
-# 62 "data//maps/PokeSpawn/scripts.pory"
+# 65 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_RETURNED_DEVON_GOODS
-# 63 "data//maps/PokeSpawn/scripts.pory"
+# 66 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
-# 64 "data//maps/PokeSpawn/scripts.pory"
-	setvar VAR_RUSTBORO_CITY_STATE, 7
 	return
 
 
 Walley1::
-# 69 "data//maps/PokeSpawn/scripts.pory"
-	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM
-# 70 "data//maps/PokeSpawn/scripts.pory"
-	setvar VAR_PETALBURG_GYM_STATE, 2
-# 71 "data//maps/PokeSpawn/scripts.pory"
-	setvar VAR_PETALBURG_CITY_STATE, 3
 # 72 "data//maps/PokeSpawn/scripts.pory"
-	clearflag FLAG_HIDE_PETALBURG_CITY_WALLY
+	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM
 # 73 "data//maps/PokeSpawn/scripts.pory"
-	clearflag FLAG_HIDE_PETALBURG_GYM_WALLY
+	setvar VAR_PETALBURG_GYM_STATE, 2
 # 74 "data//maps/PokeSpawn/scripts.pory"
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
+	setvar VAR_PETALBURG_CITY_STATE, 3
 # 75 "data//maps/PokeSpawn/scripts.pory"
+	clearflag FLAG_HIDE_PETALBURG_CITY_WALLY
+# 76 "data//maps/PokeSpawn/scripts.pory"
+	clearflag FLAG_HIDE_PETALBURG_GYM_WALLY
+# 77 "data//maps/PokeSpawn/scripts.pory"
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
+# 78 "data//maps/PokeSpawn/scripts.pory"
 	special InitBirchState
 	return
 
 
 Woods1::
-# 79 "data//maps/PokeSpawn/scripts.pory"
+# 82 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_PETALBURG_WOODS_STATE, 1
 	return
 
 
 PokeSpawn_EventScript_Dev::
-# 83 "data//maps/PokeSpawn/scripts.pory"
+# 86 "data//maps/PokeSpawn/scripts.pory"
 	lockall
-# 84 "data//maps/PokeSpawn/scripts.pory"
+# 87 "data//maps/PokeSpawn/scripts.pory"
 	msgbox PokeSpawn_EventScript_Dev_Text_0, MSGBOX_YESNO
-# 85 "data//maps/PokeSpawn/scripts.pory"
+# 88 "data//maps/PokeSpawn/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PokeSpawn_EventScript_Dev_2
 PokeSpawn_EventScript_Dev_1:
-# 99 "data//maps/PokeSpawn/scripts.pory"
+# 102 "data//maps/PokeSpawn/scripts.pory"
 	releaseall
 	end
 
 PokeSpawn_EventScript_Dev_2:
-# 86 "data//maps/PokeSpawn/scripts.pory"
-	givemon SPECIES_GRENINJA, 1
-# 87 "data//maps/PokeSpawn/scripts.pory"
-	givemon SPECIES_ZEKROM, 1
-# 88 "data//maps/PokeSpawn/scripts.pory"
-	givemon SPECIES_BUZZWOLE, 1
 # 89 "data//maps/PokeSpawn/scripts.pory"
-	givemon SPECIES_GARCHOMP, 1
+	givemon SPECIES_GRENINJA, 1
 # 90 "data//maps/PokeSpawn/scripts.pory"
-	givemon SPECIES_MARSHADOW, 1
+	givemon SPECIES_ZEKROM, 1
 # 91 "data//maps/PokeSpawn/scripts.pory"
-	givemon SPECIES_GROUDON, 1
+	givemon SPECIES_BUZZWOLE, 1
+# 92 "data//maps/PokeSpawn/scripts.pory"
+	givemon SPECIES_GARCHOMP, 1
 # 93 "data//maps/PokeSpawn/scripts.pory"
+	givemon SPECIES_MARSHADOW, 1
+# 94 "data//maps/PokeSpawn/scripts.pory"
+	givemon SPECIES_GROUDON, 1
+# 96 "data//maps/PokeSpawn/scripts.pory"
 	giveitem ITEM_MAX_REPEL, 999
-# 95 "data//maps/PokeSpawn/scripts.pory"
+# 98 "data//maps/PokeSpawn/scripts.pory"
 	call removeBalls
-# 97 "data//maps/PokeSpawn/scripts.pory"
+# 100 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PokeSpawn_EventScript_Dev_1
 
 
 PokeSpawn_EventScript_Allan::
-# 104 "data//maps/PokeSpawn/scripts.pory"
+# 107 "data//maps/PokeSpawn/scripts.pory"
 	lockall
-# 105 "data//maps/PokeSpawn/scripts.pory"
+# 108 "data//maps/PokeSpawn/scripts.pory"
 	msgbox PokeSpawn_EventScript_Allan_Text_0, MSGBOX_YESNO
-# 106 "data//maps/PokeSpawn/scripts.pory"
+# 109 "data//maps/PokeSpawn/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PokeSpawn_EventScript_Allan_2
 PokeSpawn_EventScript_Allan_1:
-# 113 "data//maps/PokeSpawn/scripts.pory"
+# 116 "data//maps/PokeSpawn/scripts.pory"
 	releaseall
 	end
 
 PokeSpawn_EventScript_Allan_2:
-# 107 "data//maps/PokeSpawn/scripts.pory"
+# 110 "data//maps/PokeSpawn/scripts.pory"
 	givemon SPECIES_GRENINJA, 1
-# 109 "data//maps/PokeSpawn/scripts.pory"
+# 112 "data//maps/PokeSpawn/scripts.pory"
 	call removeBalls
-# 111 "data//maps/PokeSpawn/scripts.pory"
+# 114 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PokeSpawn_EventScript_Allan_1
 
 
 PokeSpawn_EventScript_Mercy::
-# 118 "data//maps/PokeSpawn/scripts.pory"
+# 121 "data//maps/PokeSpawn/scripts.pory"
 	lockall
-# 119 "data//maps/PokeSpawn/scripts.pory"
+# 122 "data//maps/PokeSpawn/scripts.pory"
 	msgbox PokeSpawn_EventScript_Mercy_Text_0, MSGBOX_YESNO
-# 120 "data//maps/PokeSpawn/scripts.pory"
+# 123 "data//maps/PokeSpawn/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PokeSpawn_EventScript_Mercy_2
 PokeSpawn_EventScript_Mercy_1:
-# 127 "data//maps/PokeSpawn/scripts.pory"
+# 130 "data//maps/PokeSpawn/scripts.pory"
 	releaseall
 	end
 
 PokeSpawn_EventScript_Mercy_2:
-# 121 "data//maps/PokeSpawn/scripts.pory"
+# 124 "data//maps/PokeSpawn/scripts.pory"
 	givemon SPECIES_GRENINJA, 1
-# 123 "data//maps/PokeSpawn/scripts.pory"
+# 126 "data//maps/PokeSpawn/scripts.pory"
 	call removeBalls
-# 125 "data//maps/PokeSpawn/scripts.pory"
+# 128 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PokeSpawn_EventScript_Mercy_1
 
 
 PokeSpawn_EventScript_Greg::
-# 132 "data//maps/PokeSpawn/scripts.pory"
+# 135 "data//maps/PokeSpawn/scripts.pory"
 	lockall
-# 133 "data//maps/PokeSpawn/scripts.pory"
+# 136 "data//maps/PokeSpawn/scripts.pory"
 	msgbox PokeSpawn_EventScript_Greg_Text_0, MSGBOX_YESNO
-# 134 "data//maps/PokeSpawn/scripts.pory"
+# 137 "data//maps/PokeSpawn/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PokeSpawn_EventScript_Greg_2
 PokeSpawn_EventScript_Greg_1:
-# 141 "data//maps/PokeSpawn/scripts.pory"
+# 144 "data//maps/PokeSpawn/scripts.pory"
 	releaseall
 	end
 
 PokeSpawn_EventScript_Greg_2:
-# 135 "data//maps/PokeSpawn/scripts.pory"
+# 138 "data//maps/PokeSpawn/scripts.pory"
 	givemon SPECIES_GRENINJA, 1
-# 137 "data//maps/PokeSpawn/scripts.pory"
+# 140 "data//maps/PokeSpawn/scripts.pory"
 	call removeBalls
-# 139 "data//maps/PokeSpawn/scripts.pory"
+# 142 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PokeSpawn_EventScript_Greg_1
 
 
 PokeSpawn_EventScript_Dane::
-# 146 "data//maps/PokeSpawn/scripts.pory"
+# 149 "data//maps/PokeSpawn/scripts.pory"
 	lockall
-# 147 "data//maps/PokeSpawn/scripts.pory"
+# 150 "data//maps/PokeSpawn/scripts.pory"
 	msgbox PokeSpawn_EventScript_Dane_Text_0, MSGBOX_YESNO
-# 148 "data//maps/PokeSpawn/scripts.pory"
+# 151 "data//maps/PokeSpawn/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PokeSpawn_EventScript_Dane_2
 PokeSpawn_EventScript_Dane_1:
-# 155 "data//maps/PokeSpawn/scripts.pory"
+# 158 "data//maps/PokeSpawn/scripts.pory"
 	releaseall
 	end
 
 PokeSpawn_EventScript_Dane_2:
-# 149 "data//maps/PokeSpawn/scripts.pory"
+# 152 "data//maps/PokeSpawn/scripts.pory"
 	givemon SPECIES_GRENINJA, 1
-# 151 "data//maps/PokeSpawn/scripts.pory"
+# 154 "data//maps/PokeSpawn/scripts.pory"
 	call removeBalls
-# 153 "data//maps/PokeSpawn/scripts.pory"
+# 156 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PokeSpawn_EventScript_Dane_1
 
 
 PokeSpawn_EventScript_Savannah::
-# 161 "data//maps/PokeSpawn/scripts.pory"
+# 164 "data//maps/PokeSpawn/scripts.pory"
 	lockall
-# 162 "data//maps/PokeSpawn/scripts.pory"
+# 165 "data//maps/PokeSpawn/scripts.pory"
 	msgbox PokeSpawn_EventScript_Savannah_Text_0, MSGBOX_YESNO
-# 163 "data//maps/PokeSpawn/scripts.pory"
+# 166 "data//maps/PokeSpawn/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PokeSpawn_EventScript_Savannah_2
 PokeSpawn_EventScript_Savannah_1:
-# 170 "data//maps/PokeSpawn/scripts.pory"
+# 173 "data//maps/PokeSpawn/scripts.pory"
 	releaseall
 	end
 
 PokeSpawn_EventScript_Savannah_2:
-# 164 "data//maps/PokeSpawn/scripts.pory"
+# 167 "data//maps/PokeSpawn/scripts.pory"
 	givemon SPECIES_GRENINJA, 1
-# 166 "data//maps/PokeSpawn/scripts.pory"
+# 169 "data//maps/PokeSpawn/scripts.pory"
 	call removeBalls
-# 168 "data//maps/PokeSpawn/scripts.pory"
+# 171 "data//maps/PokeSpawn/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PokeSpawn_EventScript_Savannah_1
 
 
 removeBalls::
-# 175 "data//maps/PokeSpawn/scripts.pory"
-	removeobject 2
-# 176 "data//maps/PokeSpawn/scripts.pory"
-	removeobject 3
-# 177 "data//maps/PokeSpawn/scripts.pory"
-	removeobject 4
 # 178 "data//maps/PokeSpawn/scripts.pory"
-	removeobject 5
+	removeobject 2
 # 179 "data//maps/PokeSpawn/scripts.pory"
-	removeobject 6
+	removeobject 3
 # 180 "data//maps/PokeSpawn/scripts.pory"
-	removeobject 7
+	removeobject 4
 # 181 "data//maps/PokeSpawn/scripts.pory"
-	setflag FLAG_GOT_MONS
+	removeobject 5
 # 182 "data//maps/PokeSpawn/scripts.pory"
+	removeobject 6
+# 183 "data//maps/PokeSpawn/scripts.pory"
+	removeobject 7
+# 184 "data//maps/PokeSpawn/scripts.pory"
+	setflag FLAG_GOT_MONS
+# 185 "data//maps/PokeSpawn/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 	return
 
 
 PokeSpawn_EventScript_Dev_Text_0:
-# 84 "data//maps/PokeSpawn/scripts.pory"
+# 87 "data//maps/PokeSpawn/scripts.pory"
 	.string "Dev Mons?$"
 
 PokeSpawn_EventScript_Allan_Text_0:
-# 105 "data//maps/PokeSpawn/scripts.pory"
+# 108 "data//maps/PokeSpawn/scripts.pory"
 	.string "Allan's Mons?$"
 
 PokeSpawn_EventScript_Mercy_Text_0:
-# 119 "data//maps/PokeSpawn/scripts.pory"
+# 122 "data//maps/PokeSpawn/scripts.pory"
 	.string "Mercy's Mons?$"
 
 PokeSpawn_EventScript_Greg_Text_0:
-# 133 "data//maps/PokeSpawn/scripts.pory"
+# 136 "data//maps/PokeSpawn/scripts.pory"
 	.string "Greg's Mons?$"
 
 PokeSpawn_EventScript_Dane_Text_0:
-# 147 "data//maps/PokeSpawn/scripts.pory"
+# 150 "data//maps/PokeSpawn/scripts.pory"
 	.string "Dane's Mons?$"
 
 PokeSpawn_EventScript_Savannah_Text_0:
-# 162 "data//maps/PokeSpawn/scripts.pory"
+# 165 "data//maps/PokeSpawn/scripts.pory"
 	.string "Savannah's Mons?$"
