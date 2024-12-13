@@ -32,7 +32,16 @@ script PokeSpawn_EventScript_Items{
     setflag(FLAG_HIDE_ROUTE_110_TEAM_AQUA)
     setflag(FLAG_HIDE_ROUTE_110_BIRCH)
 
-    call(BoatGuy)
+    
+// Boat guy
+    setvar(VAR_BRINEY_LOCATION, 1)
+	setflag(FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN)
+	setflag(FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN)
+	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY)
+	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT)
+	clearflag(FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT)
+	clearflag(FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY)
+	clearflag(FLAG_HIDE_BRINEYS_HOUSE_PEEKO)
 
     clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND)
     clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDA)
@@ -42,29 +51,17 @@ script PokeSpawn_EventScript_Items{
     setvar(VAR_STEVENS_HOUSE_STATE, 1)
     setflag(FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE)
 
-    setvar(VAR_SOOTOPOLIS_CITY_STATE, 0)
-    clearflag(FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE)
+    
     
 
     releaseall
     end
 }
 
-script BoatGuy{
-    setvar(VAR_BRINEY_LOCATION, 1)
-	setflag(FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN)
-	setflag(FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN)
-	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY)
-	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT)
-	clearflag(FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT)
-	clearflag(FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY)
-	clearflag(FLAG_HIDE_BRINEYS_HOUSE_PEEKO)
-}
-
 script RustBoro{
     setflag(FLAG_RETURNED_DEVON_GOODS)
 	setflag(FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1)
-    //setvar(VAR_RUSTBORO_CITY_STATE, 7)
+    setvar(VAR_RUSTBORO_CITY_STATE, 7)
 }
 
 
@@ -79,7 +76,7 @@ script Walley1{
 }
 
 script Woods1{
-        setvar(VAR_PETALBURG_WOODS_STATE, 1)
+    setvar(VAR_PETALBURG_WOODS_STATE, 1)
 }
 
 script PokeSpawn_EventScript_Dev{

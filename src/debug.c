@@ -2371,50 +2371,46 @@ void BufferExpansionVersion(struct ScriptContext *ctx)
 // Actions Scripts
 static void DebugAction_Util_Script_1(u8 taskId)
 {
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 0);
-    FlagToggle(FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE);
+    FlagToggle(FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE);
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_1);
 }
 
 static void DebugAction_Util_Script_2(u8 taskId)
 {   
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 1);
+    VarSet(VAR_SOOTOPOLIS_WALLACE_STATE, 1);
+    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 0);
+    
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_2);
 }
 
 static void DebugAction_Util_Script_3(u8 taskId)
 {
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 2);
+    FlagToggle(FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE);
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_3);
 }
 
 static void DebugAction_Util_Script_4(u8 taskId)
 {
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 3);
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_4);
 }
 
 static void DebugAction_Util_Script_5(u8 taskId)
 {
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 4);
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_5);
 }
 
 static void DebugAction_Util_Script_6(u8 taskId)
 {
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 5);
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_6);
 }
 
 static void DebugAction_Util_Script_7(u8 taskId)
 {
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 6);
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_7);
 }
 
 static void DebugAction_Util_Script_8(u8 taskId)
 {
-    VarSet(VAR_SOOTOPOLIS_CITY_STATE, 7);
     Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_8);
 }
 
