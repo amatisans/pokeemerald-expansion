@@ -47,12 +47,11 @@ script PokeSpawn_EventScript_Items{
     clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDA)
     setflag(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE)
     setflag(FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER)
-    setflag(FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN)
+    //setflag(FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN)
     setvar(VAR_STEVENS_HOUSE_STATE, 1)
     setflag(FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE)
+    clearflag(FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE);
 
-    
-    
 
     releaseall
     end
@@ -83,15 +82,17 @@ script PokeSpawn_EventScript_Dev{
     lockall
     msgbox("Dev Mons?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GRENINJA,1)
+        givemon(SPECIES_TROPIUS,1)
+        givemon(SPECIES_MARILL,1)
+
+        givemon(SPECIES_KYOGRE,1)
+        givemon(SPECIES_GROUDON, 1)
+        givemon(SPECIES_MEWTWO, 1)
         givemon(SPECIES_ZEKROM, 1)
         givemon(SPECIES_BUZZWOLE, 1)
-        givemon(SPECIES_GARCHOMP, 1)
         givemon(SPECIES_MARSHADOW, 1)
-        givemon(SPECIES_GROUDON, 1)
-
         giveitem(ITEM_MAX_REPEL, 999)
-
+        
         call(removeBalls)
         
         setvar(VAR_STARTER_MON, 0)
@@ -104,7 +105,40 @@ script PokeSpawn_EventScript_Allan{
     lockall
     msgbox("Allan's Mons?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GRENINJA,1)
+        givemon(SPECIES_MAGNEMITE,1)
+        givemon(SPECIES_CUBONE,1)
+        givemon(SPECIES_NIDORAN_M,1)
+        givemon(SPECIES_HERACROSS,1)
+        givemon(SPECIES_NATU,1)
+        givemon(SPECIES_MURKROW,1)
+        givemon(SPECIES_BAGON,1)
+        givemon(SPECIES_TORKOAL,1)
+        givemon(SPECIES_BALTOY,1)
+        givemon(SPECIES_GIBLE,1)
+        givemon(SPECIES_ROTOM_FAN,1)
+        givemon(SPECIES_SKORUPI,1)
+        givemon(SPECIES_FERROSEED,1)
+        givemon(SPECIES_TIMBURR,1)
+        givemon(SPECIES_FOONGUS,1)
+        givemon(SPECIES_HAWLUCHA,1)
+        givemon(SPECIES_TYRUNT,1)
+        givemon(SPECIES_HELIOPTILE,1)
+        givemon(SPECIES_JANGMO_O,1)
+        givemon(SPECIES_ORICORIO_SENSU,1)
+        givemon(SPECIES_SANDYGAST,1)
+        givemon(SPECIES_DRACOVISH,1)
+        givemon(SPECIES_IMPIDIMP,1)
+        givemon(SPECIES_ARCTOZOLT,1)
+        givemon(SPECIES_DONDOZO,1)
+        givemon(SPECIES_FLAMIGO,1)
+        givemon(SPECIES_TINKATINK,1)
+        givemon(SPECIES_TANGELA,1)
+        givemon(SPECIES_DRACOZOLT,1)
+        givemon(SPECIES_PORYGON,1)
+
+
+        givemon(SPECIES_TROPIUS,1)
+        givemon(SPECIES_MARILL,1)
         
         call(removeBalls)
         
@@ -118,8 +152,41 @@ script PokeSpawn_EventScript_Mercy{
     lockall
     msgbox("Mercy's Mons?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GRENINJA,1)
-        
+
+        givemon(SPECIES_VULPIX,1)
+        givemon(SPECIES_TAUROS_PALDEA_AQUA,1)
+        givemon(SPECIES_EEVEE,1)
+        givemon(SPECIES_MISDREAVUS,1)
+        givemon(SPECIES_SKARMORY,1)
+        givemon(SPECIES_TEDDIURSA,1)
+        givemon(SPECIES_BELDUM,1)
+        givemon(SPECIES_FEEBAS,1)
+        givemon(SPECIES_WAILMER,1)
+        givemon(SPECIES_RIOLU,1)
+        givemon(SPECIES_STUNKY,1)
+        givemon(SPECIES_CARNIVINE,1)
+        givemon(SPECIES_DRILBUR,1)
+        givemon(SPECIES_ZORUA,1)
+        givemon(SPECIES_KARRABLAST,1)
+        givemon(SPECIES_FLETCHLING,1)
+        givemon(SPECIES_KLEFKI,1)
+        givemon(SPECIES_GOOMY,1)
+        givemon(SPECIES_MIMIKYU,1)
+        givemon(SPECIES_ROCKRUFF_OWN_TEMPO,1)
+        givemon(SPECIES_COMFEY,1)
+        givemon(SPECIES_DURALUDON,1)
+        givemon(SPECIES_YAMPER,1)
+        givemon(SPECIES_FALINKS,1)
+        givemon(SPECIES_CHARCADET,1)
+        givemon(SPECIES_WATTREL,1)
+        givemon(SPECIES_TATSUGIRI,1)
+        givemon(SPECIES_SANDSHREW_ALOLAN ,1)
+        givemon(SPECIES_LITWICK,1)
+        givemon(SPECIES_PONYTA_GALARIAN,1)
+
+        givemon(SPECIES_TROPIUS,1)
+        givemon(SPECIES_MARILL,1)
+
         call(removeBalls)
         
         setvar(VAR_STARTER_MON, 0)
@@ -132,7 +199,41 @@ script PokeSpawn_EventScript_Greg{
     lockall
     msgbox("Greg's Mons?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GRENINJA,1)
+
+        givemon(SPECIES_GASTLY,1)
+        givemon(SPECIES_ABRA,1)
+        givemon(SPECIES_POLIWAG,1)
+        givemon(SPECIES_PICHU,1)
+        givemon(SPECIES_SNEASEL,1)
+        givemon(SPECIES_ELEKID,1)
+        givemon(SPECIES_SEVIPER,1)
+        givemon(SPECIES_SPHEAL,1)
+        givemon(SPECIES_CARVANHA,1)
+        givemon(SPECIES_CRANIDOS,1)
+        givemon(SPECIES_MUNCHLAX,1)
+        givemon(SPECIES_DRIFLOON,1)
+        givemon(SPECIES_SANDILE,1)
+        givemon(SPECIES_ARCHEN,1)
+        givemon(SPECIES_AXEW,1)
+        givemon(SPECIES_PANCHAM,1)
+        givemon(SPECIES_PHANTUMP,1)
+        givemon(SPECIES_NOIBAT,1)
+        givemon(SPECIES_MORELULL,1)
+        givemon(SPECIES_PASSIMIAN,1)
+        givemon(SPECIES_ORANGURU,1)
+        givemon(SPECIES_CHEWTLE,1)
+        givemon(SPECIES_CUFANT,1)
+        givemon(SPECIES_ROOKIDEE,1)
+        givemon(SPECIES_FRIGIBAX,1)
+        givemon(SPECIES_NYMBLE,1)
+        givemon(SPECIES_FIDOUGH,1)
+        givemon(SPECIES_GOLETT,1)
+        givemon(SPECIES_SCYTHER,1)
+        givemon(SPECIES_MEOWTH,1)
+        
+
+        givemon(SPECIES_TROPIUS,1)
+        givemon(SPECIES_MARILL,1)
 
         call(removeBalls)
         
@@ -146,7 +247,41 @@ script PokeSpawn_EventScript_Dane{
     lockall
     msgbox("Dane's Mons?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GRENINJA,1)
+
+        givemon(SPECIES_MAGIKARP,1)
+        givemon(SPECIES_AERODACTYL,1)
+        givemon(SPECIES_LAPRAS,1)
+        givemon(SPECIES_GLIGAR,1)
+        givemon(SPECIES_SWINUB,1)
+        givemon(SPECIES_MAGBY,1)
+        givemon(SPECIES_RALTS,1)
+        givemon(SPECIES_DUSKULL,1)
+        givemon(SPECIES_TRAPINCH,1)
+        givemon(SPECIES_CROAGUNK,1)
+        givemon(SPECIES_BRONZOR,1)
+        givemon(SPECIES_SPIRITOMB,1)
+        givemon(SPECIES_DURANT,1)
+        givemon(SPECIES_SAWK,1)
+        givemon(SPECIES_SIGILYPH,1)
+        givemon(SPECIES_HONEDGE,1)
+        givemon(SPECIES_FLABEBE,1)
+        givemon(SPECIES_CARBINK,1)
+        givemon(SPECIES_MAREANIE,1)
+        givemon(SPECIES_WISHIWASHI_SCHOOL,1)
+        givemon(SPECIES_GRUBBIN,1)
+        givemon(SPECIES_TOXEL,1)
+        givemon(SPECIES_APPLIN,1)
+        givemon(SPECIES_ROLYCOLY,1)
+        givemon(SPECIES_CYCLIZAR,1)
+        givemon(SPECIES_MASCHIFF,1)
+        givemon(SPECIES_TOEDSCOOL,1)
+        givemon(SPECIES_DRAMPA,1)
+        givemon(SPECIES_HAPPINY,1)
+        givemon(SPECIES_GEODUDE,1)
+        
+
+        givemon(SPECIES_TROPIUS,1)
+        givemon(SPECIES_MARILL,1)
 
         call(removeBalls)
         
@@ -161,7 +296,8 @@ script PokeSpawn_EventScript_Savannah{
     lockall
     msgbox("Savannah's Mons?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GRENINJA,1)
+        givemon(SPECIES_TROPIUS,1)
+        givemon(SPECIES_MARILL,1)
 
         call(removeBalls)
         
