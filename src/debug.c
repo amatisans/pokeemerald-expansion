@@ -2371,8 +2371,7 @@ void BufferExpansionVersion(struct ScriptContext *ctx)
 // Actions Scripts
 static void DebugAction_Util_Script_1(u8 taskId)
 {
-    FlagClear(FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE);
-    //Debug_DestroyMenu_Full_Script(taskId, Debug_EventScript_Script_1);
+    
 }
 
 static void DebugAction_Util_Script_2(u8 taskId)

@@ -7,75 +7,13 @@ script PokeSpawn_EventScript_Items{
     giveitem(ITEM_EXP_CANDY_XL, 999)
     playfanfare(MUS_OBTAIN_ITEM)
 
-	setflag(FLAG_SYS_POKEDEX_GET)
-    //setflag(FLAG_ADVENTURE_STARTED)
-	special(SetUnlockedPokedexFlags)
-	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-	setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag(FLAG_SYS_POKENAV_GET)
-    setflag(FLAG_RECEIVED_POKENAV)
+    call(cheatStart)
 
-    setflag(FLAG_SYS_NATIONAL_DEX)
-	special(EnableNationalPokedex)
-
-    setflag(FLAG_SYS_B_DASH)
-	setvar(VAR_LITTLEROOT_TOWN_STATE, 4)
-    
-    removeobject(1)
     setflag(FLAG_RARE_CANDY)
 
-    call(Walley1)
-    call(Woods1)
-    call(RustBoro)
-    setflag(FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA)
-    setflag(FLAG_DELIVERED_DEVON_GOODS)
-    setflag(FLAG_HIDE_ROUTE_110_TEAM_AQUA)
-    setflag(FLAG_HIDE_ROUTE_110_BIRCH)
-
-    
-// Boat guy
-    setvar(VAR_BRINEY_LOCATION, 1)
-	setflag(FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN)
-	setflag(FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN)
-	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY)
-	setflag(FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT)
-	clearflag(FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT)
-	clearflag(FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY)
-	clearflag(FLAG_HIDE_BRINEYS_HOUSE_PEEKO)
-
-    clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND)
-    clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDA)
-    setflag(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE)
-    setflag(FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER)
-    //setflag(FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN)
-    setvar(VAR_STEVENS_HOUSE_STATE, 1)
-    setflag(FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE)
-    clearflag(FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE);
-
-
+    removeobject(1)
     releaseall
     end
-}
-
-script RustBoro{
-    setflag(FLAG_RETURNED_DEVON_GOODS)
-	setflag(FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1)
-    setvar(VAR_RUSTBORO_CITY_STATE, 7)
-}
-
-
-script Walley1{
-    setflag(FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM)
-	setvar(VAR_PETALBURG_GYM_STATE, 2)
-	setvar(VAR_PETALBURG_CITY_STATE, 3)
-	clearflag(FLAG_HIDE_PETALBURG_CITY_WALLY)
-	clearflag(FLAG_HIDE_PETALBURG_GYM_WALLY)
-	setflag(FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL)
-	special(InitBirchState)
-}
-
-script Woods1{
-    setvar(VAR_PETALBURG_WOODS_STATE, 1)
 }
 
 script PokeSpawn_EventScript_Dev{
@@ -179,7 +117,7 @@ script PokeSpawn_EventScript_Mercy{
         givemon(SPECIES_FALINKS,1)
         givemon(SPECIES_CHARCADET,1)
         givemon(SPECIES_WATTREL,1)
-        givemon(SPECIES_TATSUGIRI,1)
+        givemon(SPECIES_TATSUGIRI_DROOPY,1)
         givemon(SPECIES_SANDSHREW_ALOLAN ,1)
         givemon(SPECIES_LITWICK,1)
         givemon(SPECIES_PONYTA_GALARIAN,1)
@@ -267,7 +205,7 @@ script PokeSpawn_EventScript_Dane{
         givemon(SPECIES_FLABEBE,1)
         givemon(SPECIES_CARBINK,1)
         givemon(SPECIES_MAREANIE,1)
-        givemon(SPECIES_WISHIWASHI_SCHOOL,1)
+        givemon(SPECIES_WISHIWASHI,1)
         givemon(SPECIES_GRUBBIN,1)
         givemon(SPECIES_TOXEL,1)
         givemon(SPECIES_APPLIN,1)
@@ -317,3 +255,171 @@ script removeBalls{
     setflag(FLAG_GOT_MONS)
     setflag(FLAG_SYS_POKEMON_GET)
 }
+
+script cheatStart{
+	setflag(FLAG_SYS_POKEMON_GET)
+	setflag(FLAG_RESCUED_BIRCH)
+	setflag(FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE)
+	//setflag(FLAG_ADVENTURE_STARTED)
+	clearflag(FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH)
+	setflag(FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)
+	setvar(VAR_BIRCH_LAB_STATE, 2)
+	setvar(VAR_ROUTE101_STATE, 3)
+
+    // Wally
+    setflag(FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM)
+	setvar(VAR_PETALBURG_GYM_STATE, 2)
+	setvar(VAR_PETALBURG_CITY_STATE, 3)
+	clearflag(FLAG_HIDE_PETALBURG_CITY_WALLY)
+	clearflag(FLAG_HIDE_PETALBURG_GYM_WALLY)
+	setflag(FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL)
+	special(InitBirchState)
+
+	setflag(FLAG_SYS_POKEDEX_GET)
+	special(SetUnlockedPokedexFlags)
+	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+	setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 2)
+	setflag(FLAG_SYS_NATIONAL_DEX)
+	special(EnableNationalPokedex)
+    setflag(FLAG_SYS_POKENAV_GET)
+    setflag(FLAG_RECEIVED_POKENAV)
+	setflag(FLAG_RECEIVED_RUNNING_SHOES)
+	setflag(FLAG_SYS_B_DASH)
+	setvar(VAR_LITTLEROOT_TOWN_STATE, 4)// @ 4: Received Running Shoes
+	setvar(VAR_LITTLEROOT_INTRO_STATE, 7)// @ 7: Told to go meet rival)
+	setvar(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2)// @ 2: Met Rival's Mom (and is corresponding gender)
+	setvar(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2)// @ 2: Met Rival's Mom (and is corresponding gender)
+	setvar(VAR_LITTLEROOT_RIVAL_STATE, 4)// @ 4: Received Pokedex
+	// setflag(FLAG_RECEIVED_BIKE)
+	// additem(ITEM_ACRO_BIKE)
+
+    setflag(FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA)
+
+    setflag(FLAG_DELIVERED_DEVON_GOODS)
+    setflag(FLAG_RETURNED_DEVON_GOODS)
+    setflag(FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1)
+    setvar(VAR_RUSTBORO_CITY_STATE, 7)
+
+
+    setflag(FLAG_HIDE_ROUTE_110_TEAM_AQUA)
+    setflag(FLAG_HIDE_ROUTE_110_BIRCH)
+    clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND)
+    clearflag(FLAG_HIDE_RUSTURF_TUNNEL_WANDA)
+    setflag(FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE)
+    setflag(FLAG_INTERACTED_WITH_STEVEN_SPACE_CENTER)
+    // setflag(FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN)
+    setvar(VAR_STEVENS_HOUSE_STATE, 1)
+    setflag(FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE)
+    clearflag(FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE)
+
+
+
+	setvar(VAR_BRINEY_HOUSE_STATE, 1)
+	setvar(VAR_ROUTE116_STATE, 2)
+	setflag(FLAG_HIDE_ROUTE_116_MR_BRINEY)
+	// setflag(FLAG_BADGE01_GET)
+	// setflag(FLAG_BADGE02_GET)
+	// setflag(FLAG_BADGE03_GET)
+	// setflag(FLAG_BADGE04_GET)
+	// setflag(FLAG_BADGE05_GET)
+	// setflag(FLAG_BADGE06_GET)
+	// setflag(FLAG_BADGE07_GET)
+	// setflag(FLAG_BADGE08_GET)
+	// setflag(FLAG_VISITED_LITTLEROOT_TOWN)
+	// setflag(FLAG_VISITED_OLDALE_TOWN)
+	// setflag(FLAG_VISITED_DEWFORD_TOWN)
+	// setflag(FLAG_VISITED_LAVARIDGE_TOWN)
+	// setflag(FLAG_VISITED_FALLARBOR_TOWN)
+	// setflag(FLAG_VISITED_VERDANTURF_TOWN)
+	// setflag(FLAG_VISITED_PACIFIDLOG_TOWN)
+	// setflag(FLAG_VISITED_PETALBURG_CITY)
+	// setflag(FLAG_VISITED_SLATEPORT_CITY)
+	// setflag(FLAG_VISITED_MAUVILLE_CITY)
+	// setflag(FLAG_VISITED_RUSTBORO_CITY)
+	// setflag(FLAG_VISITED_FORTREE_CITY)
+	// setflag(FLAG_VISITED_LILYCOVE_CITY)
+	// setflag(FLAG_VISITED_MOSSDEEP_CITY)
+	// setflag(FLAG_VISITED_SOOTOPOLIS_CITY)
+	// setflag(FLAG_VISITED_EVER_GRANDE_CITY)
+	// setflag(FLAG_LANDMARK_POKEMON_LEAGUE)
+	// setflag(FLAG_LANDMARK_BATTLE_FRONTIER)
+	clearflag(FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY)
+	clearflag(FLAG_HIDE_BRINEYS_HOUSE_PEEKO)
+}
+
+
+script Woods1{
+    setvar(VAR_PETALBURG_WOODS_STATE, 1)
+}
+
+
+raw `
+SpawnRoom_MoveRelearner_MoveRelearner::
+	lockall
+	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
+	goto SpawnRoom_MoveRelearner_AskTeachMove
+	end
+
+SpawnRoom_MoveRelearner_AskTeachMove::
+	msgbox SpawnRoom_MoveRelearner_Text_ThatsAHeartScaleWantMeToTeachMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, SpawnRoom_MoveRelearner_ComeBackWithHeartScale
+	goto SpawnRoom_MoveRelearner_ChooseMon
+	end
+
+SpawnRoom_MoveRelearner_ChooseMon::
+	msgbox SpawnRoom_MoveRelearner_Text_TutorWhichMon, MSGBOX_DEFAULT
+	special ChooseMonForMoveRelearner
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, SpawnRoom_MoveRelearner_ComeBackWithHeartScale
+	special IsSelectedMonEgg
+	goto_if_eq VAR_RESULT, TRUE, SpawnRoom_MoveRelearner_CantTeachEgg
+	goto_if_eq VAR_0x8005, 0, SpawnRoom_MoveRelearner_NoMoveToTeachMon
+	goto SpawnRoom_MoveRelearner_ChooseMove
+	end
+
+SpawnRoom_MoveRelearner_ChooseMove::
+	msgbox SpawnRoom_MoveRelearner_Text_TeachWhichMove, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	goto_if_eq VAR_0x8004, 0, SpawnRoom_MoveRelearner_ChooseMon
+	goto SpawnRoom_MoveRelearner_ComeBackWithHeartScale
+	end
+
+SpawnRoom_MoveRelearner_NoMoveToTeachMon::
+	msgbox SpawnRoom_MoveRelearner_Text_DontHaveMoveToTeachPokemon, MSGBOX_DEFAULT
+	goto SpawnRoom_MoveRelearner_ChooseMon
+	end
+
+SpawnRoom_MoveRelearner_CantTeachEgg::
+	msgbox SpawnRoom_MoveRelearner_Text_CantTeachEgg, MSGBOX_DEFAULT
+	goto SpawnRoom_MoveRelearner_ChooseMon
+	end
+
+SpawnRoom_MoveRelearner_ComeBackWithHeartScale::
+	msgbox SpawnRoom_MoveRelearner_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SpawnRoom_MoveRelearner_Text_ThatsAHeartScaleWantMeToTeachMove:
+	.string "Vet me guess, you vant to try hard.\n"
+	.string "So, you vant me to teach\n"
+	.string "a vew move?$"
+
+SpawnRoom_MoveRelearner_Text_TutorWhichMon:
+	.string "Vich POKéMON veeds tutoring?$"
+
+SpawnRoom_MoveRelearner_Text_TeachWhichMove:
+	.string "Vich move should I teach?$"
+
+SpawnRoom_MoveRelearner_Text_DontHaveMoveToTeachPokemon:
+	.string "Vhat POKéMON has nein moves to\n"
+    .string "to teach.$"
+
+SpawnRoom_MoveRelearner_Text_ComeBackWithHeartScale:
+	.string "Come vack later.$"
+
+SpawnRoom_MoveRelearner_Text_CantTeachEgg:
+	.string "VAT? Vere isn't a single move vat\n"
+	.string "I can teach an EGG.$"
+`
